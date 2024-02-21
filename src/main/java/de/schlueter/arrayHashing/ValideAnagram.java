@@ -7,6 +7,13 @@ import java.util.HashMap;
  * ValideAnagram
  */
 public class ValideAnagram {
+    /**
+     * Own Solution it is slower but i thought through it
+     *
+     * @param s 
+     * @param t 
+     * @return 
+     */
     // public boolean isAnagram(String s, String t) {
     //     HashMap<String, Integer> map = new HashMap<>();
     //     for (String letter : s.split("")) {
@@ -21,17 +28,24 @@ public class ValideAnagram {
     //
     //     return !map.values().stream().anyMatch(value -> value != 0);
     // }
-    //
+    
 
+    /**
+     * Faster Versio of the Algorithm
+     * found it on the Solution page
+     *
+     * @param s 
+     * @param t  
+     * @return if the result is an anagram or not
+     */
     public boolean isAnagram(String s, String t) {
         char[] sToChar = s.toCharArray();
         char[] tToChar = t.toCharArray();
 
-
         Arrays.sort(sToChar);
         Arrays.sort(tToChar);
 
-        if(s.length() != t.length()){
+        if (s.length() != t.length()) {
             return false;
         }
 
