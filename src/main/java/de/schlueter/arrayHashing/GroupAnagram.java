@@ -1,5 +1,8 @@
 package de.schlueter.arrayHashing;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -7,7 +10,23 @@ import java.util.List;
  */
 public class GroupAnagram {
     public List<List<String>> groupAnagra(String[] strs) {
-        // TODO: use a hash map to write down the index of each matched element
-        return null;
+        List<List<String>> result = new ArrayList<>();
+        HashMap<String, List<String>> map = new HashMap<>();
+
+        for (String string : strs) {
+            char[] stringToChar = string.toCharArray();
+            Arrays.sort(stringToChar);
+            String sortedString = new String(stringToChar);
+
+            if (!map.containsKey(sortedString)) {
+                map.put(sortedString, new ArrayList<>());
+            }
+
+            map.get(sortedString).add(string);
+        }
+
+        result.addAll(map.values());
+
+        return result;
     }
 }

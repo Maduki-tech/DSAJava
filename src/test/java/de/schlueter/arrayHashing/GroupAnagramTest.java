@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.List;
-
 import org.junit.jupiter.api.Test;
 
 /**
@@ -16,7 +15,7 @@ public class GroupAnagramTest {
         GroupAnagram sut = new GroupAnagram();
 
         List<List<String>> expected = Arrays.asList(
-            Arrays.asList("bat"), Arrays.asList("nat", "tan"), Arrays.asList("ate", "eat", "tea"));
+            Arrays.asList("eat", "tea", "ate"), Arrays.asList("tan", "nat"), Arrays.asList("bat"));
 
         String[] input = new String[] {"eat", "tea", "tan", "ate", "nat", "bat"};
 
