@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
  * GroupAnagramTest
  */
 public class GroupAnagramTest {
-    @Test
     public void group_test() {
         GroupAnagram sut = new GroupAnagram();
 

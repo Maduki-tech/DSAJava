@@ -10,9 +10,9 @@ import java.util.List;
  */
 
 /**
-* So the Map looks like this:
-* "aet" : ["eat", "tea", "ate"]
-*/
+ * So the Map looks like this:
+ * "aet" : ["eat", "tea", "ate"]
+ */
 public class GroupAnagram {
     public List<List<String>> groupAnagra(String[] strs) {
         List<List<String>> result = new ArrayList<>();
@@ -24,7 +24,6 @@ public class GroupAnagram {
             Arrays.sort(stringToChar);
             String sortedString = new String(stringToChar);
 
-            
             // If the sorted string is not in the map add it
             if (!map.containsKey(sortedString)) {
                 map.put(sortedString, new ArrayList<>());
