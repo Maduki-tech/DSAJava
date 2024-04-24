@@ -6,8 +6,6 @@ package de.schlueter.twopointer;
 public class ValidPalindrom {
     public boolean isPalindrom(String s) {
         String cleanString = s.replaceAll("[^a-zA-Z0-9]+", "").toLowerCase();
-        System.out.println(cleanString);
-        System.out.println(reverseString(cleanString));
         return cleanString.equals(reverseString(cleanString));
     }
 
